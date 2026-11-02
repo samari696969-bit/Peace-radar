@@ -1,0 +1,8 @@
+[
+  {
+    "name": "Название официального источника",
+    "url": "https://example.gov.ru/rss.xml",
+    "region": "Название региона",
+    "status": "info"
+  }
+]
