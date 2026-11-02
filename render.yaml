@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: peace-radar
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: DATABASE_PATH
+        value: /var/data/peace_radar.db
+    disk:
+      name: peace-radar-data
+      mountPath: /var/data
+      sizeGB: 1
